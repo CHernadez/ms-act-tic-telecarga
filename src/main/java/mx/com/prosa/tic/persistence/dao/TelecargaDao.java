@@ -45,6 +45,6 @@ public interface TelecargaDao extends JpaRepository<Telecarga1pq98U, BigDecimal>
 	 * @param odtFolioTelecarga the odt folio telecarga
 	 * @return the telecarga 1 pq 98 U
 	 */
-	@Query("SELECT t FROM Telecarga1pq98U t WHERE t.odtFolioTelecarga =?1")
+	@Query("SELECT t FROM Telecarga1pq98U t WHERE t.modMarca = 'INGENICO' and t.odtFolioTelecarga =?1")
 	Telecarga1pq98U findTelecargaByFolio(BigDecimal odtFolioTelecarga);
 }
